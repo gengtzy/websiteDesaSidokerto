@@ -1,0 +1,293 @@
+/* Reset CSS */
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style Navbar */
+.navbar {
+    background-color: #68B984;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    max-width: 100px;
+    margin-right: 20px;
+    margin-left: 50px;
+    border-right: 4px solid #fff;
+    padding-right: 10px;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    margin-left: auto; /*Membuat lish berada di kanan*/
+
+}
+.navbar-text {
+    color: #fff;
+    margin-right: 10px; /* Memberikan ruang antara teks dan garis */
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-list li {
+    margin-left: 20px; /*Mengatur margin kiri antara menu*/
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+}
+/* untuk footer */
+footer{
+    width: 100%;
+    background: #68B984;
+    color: white;
+    align-items: CENTER;
+   
+  }
+  
+  footer h1{
+    color: white;
+  }
+  
+  .footer P{
+    text-align: center;
+  }
+  
+  .container-footer-all{
+    width: 100%;
+  
+    padding: 40px;
+  }
+  
+  .container-body{
+    display: flex;
+    justify-content: space-around;
+  
+  }
+  
+  .colum1{
+    max-width: 400px;
+  }
+  
+  .colum1 h1{
+    font-size: 22px;
+  }
+  
+  .colum1 p{
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    text-align: justify;
+  }
+  
+  .colum2{         
+    max-width: 400px;
+    margin-right: 95px;
+    
+    
+  }
+  
+  .colum2 h1{
+    font-size: 22px;
+  }
+  
+  .row{
+    margin-top: 20px;
+    display: flex;
+  }
+  
+  .row img{
+    width: 36px;
+    height: 36px;
+   
+  }
+  
+  .row a{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .colum3{
+    max-width: 400px;
+  }
+  
+  .colum3 h1{
+    font-size: 22px;
+  }
+  
+  .row2{
+    margin-top: 20px;
+    display: flex;
+  }
+  
+  .row2 img{
+    width: 36px;
+    height: 36px;
+    color: white;
+  }
+  
+  .row2 label{
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+  }
+  
+  .container-footer{
+    width: 100%;
+    background: #47b26a;
+  }
+  
+  .footer{
+    align-items: center;
+    padding: 25px;
+  }
+  
+  .informasi{
+    color: white;
+  }
+  
+  .informasi a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  
+  .copyright a{ 
+    text-decoration: none;
+    color: white;
+    
+  }
+  
+  @media screen and(max-width: 1100px){
+    
+    .container-body{
+        flex-wrap: wrap;
+    }
+    .colum1{
+       max-width: 100%; 
+    }
+  
+    .colum2,
+    .colum3{
+        margin-top: 40px;
+    }
+  }
+  /* untuk footer */
+
+
+
+
+
+
+/* Styling untuk bagian kontak kami */
+.contact-info {
+    text-align: left;
+}
+
+/* Styling untuk bagian media sosial */
+.social-icons {
+    text-align: center;
+}
+
+.social-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.social-icons li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/* CSS UNTUK ISI */
+.conten{
+    padding: 20px;
+}
+hr{
+    border: 2px solid green;
+}
+h2{
+    color:  #68B984;
+    padding-bottom: 15px;
+}
+
+footer h2{
+    color: white;
+}
+
+.judul{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 21px;
+    color: #68B984;
+}
+
+
+/* css kantor */
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    padding: 1px;
+  }
+  
+  .grid-item {
+    margin-bottom: 10px;
+    padding: 5px;
+    padding-right: 10px;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  /* css kepala desa */
+  .garis {
+    width: 2px;
+    height: 80%;
+    background-color: #000;
+    margin: 0 20px;
+}
+
+
+.head{
+    height: 250px;
+    width: 200px;
+    margin-right: 20px;
+    border-left: 4px solid #68B984;
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+}
+.kepala{
+    display: flex;
+}
+
+
+main{
+    margin-left: 20px;
+}
+
+
+
+
+

@@ -1,0 +1,12 @@
+.bg-primary, .btn-primary {
+    background-color: #68B984 !important;
+}
+
+.btn-primary {
+    border-color: #68B984;
+}
+
+.logo-admin {
+    font-family: 'Romanesco', cursive;
+    font-size: 5rem;
+}
