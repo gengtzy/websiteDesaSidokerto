@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Desa Sidokerto</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --g-900: #064e3b;
+        --g-700: #047857;
+        --g-500: #10b981;
+        --g-100: #d1fae5;
+        --g-50: #ecfdf5;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--g-50);
+        color: var(--g-900);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .btn-mono {
+        background-color: var(--g-700);
+        color: #ffffff;
+        border-radius: 0;
+        border: 1px solid var(--g-900);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.2s ease-in-out;
+      }
+      .btn-mono:hover {
+        background-color: var(--g-900);
+        color: var(--g-100);
+      }
+      .nav-link {
+        transition: color 0.2s;
+      }
+      .nav-link:hover {
+        color: var(--g-500) !important;
+      }
+
+      /* Index Specific */
+      .hero-mono {
+        background:
+          linear-gradient(rgba(4, 120, 87, 0.85), rgba(6, 78, 59, 0.95)),
+          url("assets/img/hero.jpg") no-repeat center center / cover;
+        min-height: 65vh;
+      }
+      .flat-card {
+        background-color: #ffffff;
+        border: 2px solid var(--g-100);
+        border-radius: 0;
+        transition: all 0.2s ease-in-out;
+      }
+      .flat-card:hover {
+        border-color: var(--g-500);
+        background-color: var(--g-50);
+      }
+      .section-title {
+        border-bottom: 3px solid var(--g-500);
+        display: inline-block;
+        padding-bottom: 5px;
+        color: var(--g-900);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg sticky-top shadow-sm"
+      style="background-color: #ffffff; border-bottom: 3px solid var(--g-700)"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="assets/img/sidoarjo.png"
+            alt="Logo Sidoarjo"
+            height="50"
+            class="me-2"
+          />
+          <div
+            class="d-flex flex-column justify-content-center"
+            style="line-height: 1.2"
+          >
+            <span
+              class="fw-bold text-uppercase mb-0"
+              style="color: var(--g-900); font-size: 1rem; letter-spacing: 1px"
+              >Desa Sidokerto</span
+            >
+            <span style="color: var(--g-700); font-size: 0.75rem"
+              >Kabupaten Sidoarjo</span
+            >
+          </div>
+        </a>
+        <button
+          class="navbar-toggler rounded-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          style="border-color: var(--g-500)"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul
+            class="navbar-nav ms-auto text-uppercase fw-semibold"
+            style="font-size: 0.85rem"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link px-3 active"
+                href="index.html"
+                style="color: var(--g-500) !important"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link px-3"
+                href="pages/profildesa.html"
+                style="color: var(--g-900)"
+                >Profil Desa</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link px-3"
+                href="pages/pemerintahan.html"
+                style="color: var(--g-900)"
+                >Pemerintahan</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link px-3"
+                href="pages/penduduk.html"
+                style="color: var(--g-900)"
+                >Data Desa</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link px-3"
+                href="pages/berita.html"
+                style="color: var(--g-900)"
+                >Berita</a
+              >
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a
+                class="btn btn-mono px-4 py-2 w-100"
+                href="pages/login.html"
+                style="font-size: 0.85rem"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="hero-mono d-flex align-items-center justify-content-center text-center text-white"
+    >
+      <div class="container px-3">
+        <h2 class="display-6 fw-light mb-2" style="color: var(--g-100)">
+          Website Informasi
+        </h2>
+        <h1
+          class="display-3 fw-bolder mb-3 text-uppercase"
+          style="letter-spacing: 4px; color: #ffffff"
+        >
+          Desa Sidokerto
+        </h1>
+        <p class="lead mb-5" style="color: var(--g-100)">
+          Kecamatan Buduran, Kabupaten Sidoarjo
+        </p>
+        <a href="#jelajahi" class="btn btn-mono px-5 py-3"
+          >Jelajahi Data Desa</a
+        >
+      </div>
+    </section>
+
+    <div id="jelajahi" class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <h3 class="section-title mb-4">Berita Terkini</h3>
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="flat-card h-100">
+                <div class="row g-0">
+                  <div class="col-md-5">
+                    <img
+                      src="https://placehold.co/600x400/047857/ffffff?text=Berita+Desa"
+                      class="img-fluid w-100 object-fit-cover"
+                      alt="Gambar Berita"
+                      style="height: 100%; min-height: 220px"
+                    />
+                  </div>
+                  <div
+                    class="col-md-7 d-flex flex-column justify-content-center p-4"
+                  >
+                    <h4 class="fw-bold mb-3" style="color: var(--g-900)">
+                      Penyaluran Bantuan Langsung Tunai (BLT)
+                    </h4>
+                    <p class="mb-4" style="color: var(--g-700)">
+                      Telah disalurkan Bantuan Langsung Tunai kepada 150 Kepala
+                      Keluarga di Balai Desa Sidokerto. Warga diharap membawa KK
+                      dan KTP asli untuk pencairan...
+                    </p>
+                    <div>
+                      <a
+                        href="pages/berita.html"
+                        class="btn btn-mono px-4 py-2"
+                        style="font-size: 0.85rem"
+                        >Baca Selengkapnya</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <h3 class="section-title mb-4">Agenda Kegiatan</h3>
+          <div class="d-flex flex-column gap-3">
+            <div
+              class="p-4"
+              style="
+                background-color: #ffffff;
+                border-left: 6px solid var(--g-700);
+                border-top: 1px solid var(--g-100);
+                border-right: 1px solid var(--g-100);
+                border-bottom: 1px solid var(--g-100);
+              "
+            >
+              <div class="mb-2">
+                <span
+                  class="px-2 py-1 fw-bold"
+                  style="
+                    background-color: var(--g-100);
+                    color: var(--g-900);
+                    font-size: 0.8rem;
+                  "
+                  >15 Mei 2026</span
+                >
+              </div>
+              <h5 class="fw-bold mb-1" style="color: var(--g-900)">
+                Kerja Bakti Bersih Desa
+              </h5>
+              <p class="mb-0 small" style="color: var(--g-700)">
+                📍 Seluruh RT Desa Sidokerto
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section
+      class="py-5"
+      style="background-color: var(--g-900); color: var(--g-50)"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-4 mb-lg-0 pr-lg-5">
+            <h3
+              class="mb-3 text-uppercase"
+              style="
+                border-bottom: 2px solid var(--g-500);
+                display: inline-block;
+                padding-bottom: 5px;
+              "
+            >
+              Profil Data Desa
+            </h3>
+            <p style="color: var(--g-100); margin-bottom: 2rem">
+              Informasi geografis dan administratif Desa Sidokerto secara
+              detail.
+            </p>
+            <table class="table table-borderless table-sm text-white">
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--g-700)">
+                  <td class="py-2" style="color: var(--g-100)">Kode PUM</td>
+                  <td class="py-2 fw-bold text-end">3217082001</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--g-700)">
+                  <td class="py-2" style="color: var(--g-100)">
+                    Tahun Pembentukan
+                  </td>
+                  <td class="py-2 fw-bold text-end">1966</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--g-700)">
+                  <td class="py-2" style="color: var(--g-100)">Dasar Hukum</td>
+                  <td class="py-2 fw-bold text-end">141.1/KEP.18-PEM/1966</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--g-700)">
+                  <td class="py-2" style="color: var(--g-100)">Tipologi</td>
+                  <td class="py-2 fw-bold text-end">Perindustrian / Jasa</td>
+                </tr>
+                <tr>
+                  <td class="py-2" style="color: var(--g-100)">Luas Wilayah</td>
+                  <td class="py-2 fw-bold text-end">305.28 ha</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-7 pl-lg-5">
+            <div
+              style="
+                border: 4px solid var(--g-700);
+                padding: 5px;
+                background-color: var(--g-50);
+              "
+            >
+              <iframe
+                src="https://maps.google.com/maps?q=Sidokerto,Buduran,Sidoarjo&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="350"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="pt-5 pb-3 mt-auto"
+      style="
+        background-color: var(--g-900);
+        color: var(--g-100);
+        border-top: 5px solid var(--g-700);
+      "
+    >
+      <div class="container">
+        <div class="row g-5 mb-4">
+          <div class="col-lg-4 col-md-6">
+            <h5
+              class="text-uppercase fw-bold mb-4"
+              style="
+                color: #ffffff;
+                border-bottom: 2px solid var(--g-500);
+                display: inline-block;
+                padding-bottom: 5px;
+              "
+            >
+              Profil Desa
+            </h5>
+            <p class="small text-justify" style="line-height: 1.8">
+              Desa Sidokerto - Buduran, Kabupaten Sidoarjo - Jawa Timur.<br /><br />Website
+              desa dibangun sebagai bagian dari Sistem Informasi Desa yang
+              berfungsi sebagai portal informasi, transparansi, dan sosialisasi
+              pemerintah.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <h5
+              class="text-uppercase fw-bold mb-4"
+              style="
+                color: #ffffff;
+                border-bottom: 2px solid var(--g-500);
+                display: inline-block;
+                padding-bottom: 5px;
+              "
+            >
+              Media Sosial
+            </h5>
+            <ul class="list-unstyled d-flex flex-column gap-3 small">
+              <li class="d-flex align-items-center">
+                <i
+                  class="fa-brands fa-instagram fa-xl me-3"
+                  style="color: var(--g-500)"
+                ></i>
+                <span style="line-height: 1.5">@pemdes_sidokerto</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <h5
+              class="text-uppercase fw-bold mb-4"
+              style="
+                color: #ffffff;
+                border-bottom: 2px solid var(--g-500);
+                display: inline-block;
+                padding-bottom: 5px;
+              "
+            >
+              Kontak Kami
+            </h5>
+            <ul class="list-unstyled d-flex flex-column gap-3 small">
+              <li class="d-flex align-items-start">
+                <i
+                  class="fa-solid fa-location-dot fa-xl me-3 mt-1"
+                  style="color: var(--g-500)"
+                ></i>
+                <span style="line-height: 1.5"
+                  >Jl. Kesatrian No. 42 Sidokerto.<br />Kode Pos 61252</span
+                >
+              </li>
+              <li class="d-flex align-items-center">
+                <i
+                  class="fa-solid fa-phone fa-xl me-3"
+                  style="color: var(--g-500)"
+                ></i>
+                <span>0813-3387-0598</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row pt-4 mt-2" style="border-top: 1px solid var(--g-700)">
+          <div class="col-12 text-center small" style="color: var(--g-500)">
+            <p class="mb-0">
+              2020-2026 © Kementerian Komunikasi dan Informatika RI.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
