@@ -1,67 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin | Dasboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
-<div class="container-fluid">
-        <div class="row flex-nowrap">
-            <?php include 'navbar.php';?>
-            <div class="card mx-auto my-5 row col-9" style="border-color: black;">
-                <div class="col-12 py-3 row">
-                    <span class="fw-bold fs-3">Data Pemerintahan</span>
-                </div>
-                <div class="col-12 py-3 table-responsive">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Nama</th>
-                                <th scope="col">Jabatan</th>
-                                <th scope="col">Foto</th>
-                                <th scope="col">Nip</th>
-                                <th scope="col">Button</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            require_once ("../koneksi.php");
+<?php
+require_once 'includes/header.php';
+$result = $conn->query("SELECT * FROM pemerintahan ORDER BY id ASC");
+?>
+<div class="d-flex justify-content-between align-items-center mb-4 pb-3" style="border-bottom: 2px solid var(--g-100);">
+    <h3 class="fw-bold mb-0 text-uppercase" style="color: var(--g-900);">Aparatur Desa</h3>
+    <a href="pemerintahan/form.php" class="btn btn-mono"><i class="fa-solid fa-plus me-2"></i> Tambah Pejabat</a>
+</div>
 
-                            $query = "SELECT * FROM pemerintahan";
-                            $result = $conn->query($query);
-                            if ($result->num_rows > 0) {
-                                // Fetch data from the result set
-                                $index = 1;
-                                while ($row = $result->fetch_assoc()) {
-                                ?>
-                                    <tr>
-                                        <td class=""><?php echo $index; ?></td>
-                                        <td class=""><?php echo $row["nama"]; ?></td>
-                                        <td class=""><?php echo $row["jabatan"]; ?></td>
-                                        <td class=""><?php echo $row["gambar"]; ?></td>
-                                        <td class=""><?php echo $row["nip"]; ?></td>
-                                        <td class="d-flex text-center">
-                                        <a class="col-8 mx-auto" href="pemerintahan/editPemerintahan.php?id=<?php echo $row['id']; ?>">
-                                            <button type="button" class="btn btn-secondary btn-md" style="width: 100%;">Edit</button>
-                                        </a>
-                                        </td>
-                                    </tr>
-                                <?php
-                                $index++;
-                                }
-                            } else {
-                                echo "No records found";
-                            }
-                            ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+<?php if(isset($_GET['pesan'])): ?>
+    <script> document.addEventListener("DOMContentLoaded", function() { Swal.fire({ icon: 'success', title: 'Berhasil!', text: '<?= htmlspecialchars($_GET['pesan']) ?>', confirmButtonColor: '#047857' }); }); </script>
+<?php endif; ?>
+
+<div class="flat-card p-0 overflow-hidden">
+    <div class="table-responsive">
+        <table class="table table-hover mb-0 align-middle">
+            <thead style="background-color: var(--g-900); color: var(--g-50);">
+                <tr><th class="py-3 px-4">Foto</th><th class="py-3 px-4">Nama</th><th class="py-3 px-4">Jabatan</th><th class="py-3 px-4">NIP</th><th class="py-3 px-4 text-center">Aksi</th></tr>
+            </thead>
+            <tbody>
+                <?php if ($result && $result->num_rows > 0): while ($row = $result->fetch_assoc()): ?>
+                    <tr style="border-bottom: 1px solid var(--g-100);">
+                        <td class="py-3 px-4"><img src="<?= BASE_URL ?>/uploads/<?= $row['gambar'] ?>" style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%; border: 2px solid var(--g-500);"></td>
+                        <td class="py-3 px-4 fw-bold"><?= htmlspecialchars($row['nama']); ?></td>
+                        <td class="py-3 px-4 text-uppercase"><span class="badge bg-success rounded-0"><?= htmlspecialchars($row['jabatan']); ?></span></td>
+                        <td class="py-3 px-4"><?= htmlspecialchars($row['nip']); ?></td>
+                        <td class="py-3 px-4 text-center">
+                            <a href="pemerintahan/form.php?id=<?= $row['id']; ?>" class="btn btn-sm btn-outline-primary rounded-0"><i class="fa-solid fa-pen"></i></a>
+                            <a href="#" onclick="konfirmasiHapus(event, 'pemerintahan/hapus.php?id=<?= $row['id']; ?>')" class="btn btn-sm btn-outline-danger rounded-0"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                    </tr>
+                <?php endwhile; else: ?>
+                    <tr><td colspan="5" class="text-center py-4">Data pejabat masih kosong.</td></tr>
+                <?php endif; ?>
+            </tbody>
+        </table>
     </div>
-    
-</body>
-</html>
+</div>
+<?php require_once 'includes/footer.php'; ?>
